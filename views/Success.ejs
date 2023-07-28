@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Success</title>
+    <link rel="stylesheet" href="/stylesheets/Success.css">
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-container">
+            <ul class="nav">
+                <a href="/me">ME</a>
+                <a href="/">Home</a>
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+                <a href="/exit" onclick="ShowM()">Exit</a>
+            </ul>
+        </div>
+    </div>
+    <div class="bunner">
+        <div class="welcome">
+            <div class="welcome-hello">
+                <h1>Welcome back <%= user.fullName %>
+                </h1>
+            </div>
+            <div class="welcome-info-container">
+                <h1></h1>
+
+                <div id="welcome-info" class="off welcome-info">
+
+                    <ul>
+                        
+                                    <li>
+                                        <%= user.fullName %> : 
+                                    </li>
+                                    <li>
+                                        <%= user.email %>
+                                    </li>
+                                    <li>
+                                        <%= user.password %>
+                                    </li>
+                                    <li>
+                                        <%= user.age%>
+                                    </li>
+                    </ul>
+                </div>
+
+                <div class="welcome-button">
+                    <button id="button" class="welcome-inner-button" onclick="SH()">
+                        SHOW/HIDE INFO
+                    </button>
+                </div>
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+    <% if(typeof(errors) !='undefined' ) { for(let error of errors){ %>
+        <p class="r">
+            <%= error.msg %>
+        </p>
+        <% } }else if(!isAccess){ %>
+            <p>You successfully changed your password</p>
+            <% } %>
+
+</body>
+<script>
+    const div = document.getElementById('welcome-info')
+    const button = document.getElementById('button')
+    let flag = true
+    const SH = () => {
+        if (!flag) {
+            div.classList.add("off")
+            button.innerText = "Show"
+            flag = true
+        } else {
+            div.classList.remove("off")
+            button.innerText = "Hide"
+            flag = false
+        }
+    }
+
+
+</script>
+
+</html>

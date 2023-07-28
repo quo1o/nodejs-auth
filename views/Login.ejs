@@ -1,0 +1,34 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="stylesheets/Login.css">
+</head>
+<div class="header">
+    <div class="header-container">
+        <ul class="nav">
+            <a href="/me">ME</a>
+            <a href="/">Home</a>
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="login-box">
+        <h2>Login</h2>
+        <form method="post">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="user_name" required />
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+            <input type="submit" value="Login" />
+        </form>
+        <a style="text-decoration: none; color: black;" href="/register">Don't have account?</a>
+        <h3>
+            <%= error %>
+        </h3>
+    </div>
+</div>

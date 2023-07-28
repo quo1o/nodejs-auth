@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:ital,wght@0,700;1,700&display=swap');
+
+body {
+	
+	margin: 0;
+	padding: 0;
+}
+.header {
+	background-color: #333333;
+}
+
+.header-container {
+	max-width: 940px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+.nav {
+	margin: 0;
+	padding: 20px 0;
+}
+
+.nav a {
+	display: inline;
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	font-size: 12px;
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-decoration: none;
+}
+
+.welcome-hello {
+	display: flex;
+	justify-content: center;
+	text-decoration: underline;
+}
+
+.welcome-info-container {
+	height: 200px;
+	display: flex;
+	justify-content: space-between;
+}
+.welcome-inner-button {
+	width: 100px;
+	background-color: #333333;
+	color: #fff;
+	border-radius: 8px;
+}
+.off {
+	display: none;
+}
+
